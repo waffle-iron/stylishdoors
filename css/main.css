@@ -87,8 +87,6 @@ body {
 }
 
 .btn {
-	max-width: 40rem;
-	padding: 1rem 10vw;
 	border: none;
 	border-radius: 0.5rem;
 	line-height: 1em;
@@ -103,16 +101,26 @@ body {
 
 .promo .btn {
 	width: 40rem;
+	max-width: 90vw;
 	margin-top: auto;
 	margin-bottom: auto;
+	padding: 1rem 2rem;
+}
+
+.callback .btn {
+	width: 40rem;
+	max-width: 90vw;
+	margin-top: 1rem;
+	margin-bottom: 4.2rem;
+	padding: 1rem 2rem;
 }
 
 .product .btn {
+	max-width: 40rem;
 	width: 100%;
 	max-width: 31rem;
 	padding: 0.8rem 5rem;
 	font-size: 2.4rem;
-	line-height: 2.4rem;
 }
 
 .btn:hover {
@@ -145,8 +153,6 @@ main .product:nth-of-type(2) {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	/*flex-direction: column;*/
-	/*justify-content: space-between;*/
 	flex: 1 1 38rem;
 	padding: 0 3.5rem;
 	margin: 1.375vw 1.25vw;
@@ -157,8 +163,11 @@ main .product:nth-of-type(2) {
 }
 
 .product .terms {
-	/*margin-top: auto;*/
-	/*margin-bottom: auto;*/
+	font-size: 2.4rem;
+}
+
+.terms .edge {
+	font-size: 3rem;
 }
 
 .product .galery {
@@ -318,12 +327,6 @@ main .callback {
 	line-height: 2.4rem;
 	font-size: 2.4rem;
 	font-weight: 300;
-}
-
-.callback .btn {
-	width: 40rem;
-	margin-top: 1rem;
-	margin-bottom: 4.2rem;
 }
 
 .main-footer {

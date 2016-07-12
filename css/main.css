@@ -62,6 +62,11 @@ body {
 	line-height: 2.2rem;
 }
 
+.contacts a {
+	text-decoration: none;
+	color: hsl(0, 0%, 100%);
+}
+
 .promo {
 	display: flex;
 	flex-direction: column;

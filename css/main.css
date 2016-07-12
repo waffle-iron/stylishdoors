@@ -8,12 +8,19 @@ html {
 	box-sizing: inherit;
 }
 
-body,
-.main-content,
-.main-footer,
-.description,
-.galery,
-.clients {
+@media all and (max-width: 875px) {
+	html {
+		font-size: 7px;
+	}
+}
+
+/*@media all and (max-width: 615px) {
+	html {
+		font-size: 5px;
+	}
+}*/
+
+body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
@@ -39,6 +46,16 @@ body,
 	align-items: center;
 }
 
+.logo {
+	width: 15.5rem;
+	height: 4rem;
+}
+
+.logo img {
+	max-width: 100%;
+	height: 100%;
+}
+
 .contacts {
 	margin-left: auto;
 	text-align: center;
@@ -48,15 +65,15 @@ body,
 .promo {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: center;
-	flex-grow: 1;
+	/*margin: auto;*/
+	flex-basis: 100%;
 	text-align: center;
 }
 
 .promo h1 {
-	/*margin-bottom: 2rem;*/
+	margin: auto 0 0;
 	font-size: 4.8rem;
 	font-weight: normal;
 	line-height: 5.8rem;
@@ -64,30 +81,287 @@ body,
 }
 
 .promo p {
-	margin-top: 0;
+	margin: 0;
 	font-size: 3rem;
 	line-height: 3.6rem;
 }
 
 .btn {
 	max-width: 40rem;
-	height: 5rem;
-	margin: auto;
 	padding: 1rem 10vw;
 	border: none;
 	border-radius: 0.5rem;
-	line-height: 3rem;
+	line-height: 1em;
 	font-size: 3rem;
+	font-weight: 300;
 	text-align: center;
 	text-decoration: none;
 	background-color: hsl(52, 100%, 50%);
 	color: hsl(0, 0%, 14%);
+	transition: ease-in-out 0.2s;
+}
+
+.promo .btn {
+	width: 40rem;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.product .btn {
+	width: 100%;
+	max-width: 31rem;
+	padding: 0.8rem 5rem;
+	font-size: 2.4rem;
+	line-height: 2.4rem;
 }
 
 .btn:hover {
-	background-color: hsl(52, 100%, 80%);
+	background-color: hsl(48, 100%, 50%);
 }
 
 .btn:active {
+	background-color: hsl(48, 100%, 80%);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+main .product {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 3vw 4.0625vw;
+	margin-bottom: 2px;
 	background-color: hsl(0, 0%, 100%);
+}
+
+main .product:nth-of-type(2) {
+	flex-direction: row-reverse;
+}
+
+.product .kind {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	/*flex-direction: column;*/
+	/*justify-content: space-between;*/
+	flex: 1 1 38rem;
+	padding: 0 3.5rem;
+	margin: 1.375vw 1.25vw;
+}
+
+.product .description {
+	width: 100%;
+}
+
+.product .terms {
+	/*margin-top: auto;*/
+	/*margin-bottom: auto;*/
+}
+
+.product .galery {
+	flex: 100000 2.65789473684211 50.5rem;
+	align-self: center;
+	margin: 1.375vw 1.25vw;
+	background-color: lightblue;
+}
+
+.galery .slider {
+	position: relative;
+	flex: 100000 2.65789473684211 50.5rem;
+	margin: 0 9.8019801980198% 5.190311418685%;
+}
+
+.slider .slide {
+	position: absolute;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.slider .slide:first-of-type {
+	position: static;
+}
+
+.slide .image {
+	flex: 1 1 158px;
+	margin: 1%;
+}
+
+.slider img {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+}
+
+
+
+main .clients {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	padding: 1.3125vw 4.8125vw;
+	background-color: hsl(0, 0%, 100%);
+}
+
+.clients h2 {
+	margin: 3rem;
+	padding: 0;
+	line-height: 4rem;
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+.clients h3 {
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+.clients .people {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	margin: 0.4375vw 0;
+}
+
+.people .celebrity {
+	display: flex;
+	flex-flow: row wrap;
+	flex: 1 1 40rem;
+	align-content: flex-start;
+	margin: 1.125vw 2.5625vw;
+	padding: 0.9rem 1.2rem;
+	min-height: 28rem;
+	border-radius: 0.5rem;
+	background-color: hsl(198, 41%, 58%);
+	color: hsl(0, 0%, 100%);
+}
+
+.celebrity img {
+	width: 15.6rem;
+	height: 15.6rem;
+	margin: 1.8rem;
+	border-radius: 50%;
+}
+
+.celebrity h4 {
+	font-size: 2.4rem;
+	font-weight: 300;
+	max-width: 13rem;
+	margin: 1.8rem;
+	align-self: center;
+}
+
+.celebrity p {
+	width: 100%;
+	margin: 0 1.8rem;
+	line-height: 2.2rem;
+}
+
+.clients .companies {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: center;
+	margin: 1.125vw 0 2.625vw;
+}
+
+.companies img {
+	flex: 0 1 auto;
+	height: 13.4rem;
+	width: auto;
+	margin: 2.3125vw;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	transition: ease-in-out 0.3s;
+}
+
+.companies img:hover {
+	flex: 0 1 auto;
+	height: 13.4rem;
+	width: auto;
+	-webkit-filter: none;
+	filter: none;
+}
+
+.companies img:nth-of-type(2) {
+	order: 2;
+}
+
+main .callback {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1.5rem;
+}
+
+.callback p {
+	margin-top: 4.5rem;
+	margin-bottom: 4.5rem;
+	font-size: 3rem;
+	line-height: 3.6rem;
+	text-align: center;
+}
+
+.callback input {
+	width: 40rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding: 1.5rem 1.8rem;
+	border: 0.2rem solid hsl(0, 0%, 78%);
+	border-radius: 0.5rem;
+	line-height: 2.4rem;
+	font-size: 2.4rem;
+	font-weight: 300;
+}
+
+.callback .btn {
+	width: 40rem;
+	margin-top: 1rem;
+	margin-bottom: 4.2rem;
+}
+
+.main-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-footer .googlemaps {
+	width: 100vw;
+	height: 50vh;
+}
+
+.without-js .googlemaps {
+	display: none;
+}
+
+.without-js .mapscreenshot {
+	display: block;
+}
+
+.mapscreenshot p {
+	margin-left: 2rem;
+	font-size: 2.4rem;
+}
+
+.mapscreenshot a {
+	display: block;
+	width: 100vw;
+	height: 50vh;
+	background: hsl(148, 17%, 80%) url("../img/mapscreenshot.jpg") no-repeat center;
+	background-size: cover;
+}
+.with-js .mapscreenshot {
+	display: none;
+}
+
+.main-footer .copyright {
+	margin: 2.6rem;
+	text-align: center;
 }

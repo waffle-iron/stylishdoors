@@ -333,7 +333,7 @@ main .callback {
 }
 
 .main-footer .googlemaps {
-	width: 100vw;
+	width: 100%;
 	height: 50vh;
 }
 
@@ -352,7 +352,7 @@ main .callback {
 
 .mapscreenshot a {
 	display: block;
-	width: 100vw;
+	width: 100%;
 	height: 50vh;
 	background: hsl(148, 17%, 80%) url("../img/mapscreenshot.jpg") no-repeat center;
 	background-size: cover;

@@ -250,6 +250,7 @@ main .clients {
 	align-content: flex-start;
 	margin: 1.125vw 2.5625vw;
 	padding: 0.9rem 1.2rem;
+	max-width: 70rem;
 	min-height: 28rem;
 	border-radius: 0.5rem;
 	background-color: hsl(198, 41%, 58%);

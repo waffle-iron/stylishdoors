@@ -346,11 +346,11 @@ main .callback {
 	height: 50vh;
 }
 
-.without-js .googlemaps {
+.js-false .googlemaps {
 	display: none;
 }
 
-.without-js .mapscreenshot {
+.js-false .mapscreenshot {
 	display: block;
 }
 
@@ -366,7 +366,7 @@ main .callback {
 	background: hsl(148, 17%, 80%) url("../img/mapscreenshot.jpg") no-repeat center;
 	background-size: cover;
 }
-.with-js .mapscreenshot {
+.js-true .mapscreenshot {
 	display: none;
 }
 
